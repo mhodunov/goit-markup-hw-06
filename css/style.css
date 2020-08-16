@@ -516,7 +516,7 @@ img {
 
 	background: #ffffff;
 
-	transition-property: box-shadow, transform;
+	transition-property: box-shadow;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -561,9 +561,6 @@ img {
 	transform: translatey(0);
 	width: 370px;
 	height: 294px;
-	transition-property: transform;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-description {
@@ -589,6 +586,10 @@ img {
 	line-height: 1.56;
 
 	transform: translatey(101%);
+
+	transition-property: transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-list {
