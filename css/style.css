@@ -759,8 +759,18 @@ img {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 11px 11px;
+	fill: #000000;
+
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+	fill: var(--accent-color);
 }
 
 .backdrop.is-hidden {
