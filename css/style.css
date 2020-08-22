@@ -308,6 +308,12 @@ img {
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.send {
+	
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+}
+
 /*Section*/
 
 .section {
@@ -711,6 +717,44 @@ img {
 	margin-right: 94px;
 }
 
+/*Subscribe*/
+
+.subscribe-field {
+
+	display: inline-block;
+	outline: none;
+	
+	height: 50px;
+	min-width: 358px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 4px;
+	background: transparent;
+
+	font-size: 16px;
+	color: var(--additional-color);
+
+	transition-property: border;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.subscribe-field::placeholder {
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0.6);
+	letter-spacing: 0.03em;
+}
+
+.subscribe-field:hover,
+.subscribe-field:focus,
+.subscribe-field:not(:placeholder-shown) {
+	border-color: var(--additional-color);
+}
+
 /*Modal*/
 
 .backdrop {
@@ -778,3 +822,61 @@ img {
 	pointer-events: none;
 	opacity: 0;
 }
+
+.modal-form {
+
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.01em;
+	color: var(--primary-text-color);
+
+	padding-right: 40px;
+	padding-left: 40px;
+
+}
+
+.modal-form-title {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 1.15;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: var(--secondary-text-color);
+}
+
+.modal-form-field {
+
+	display: block;
+	width: 100%;
+	height: 40px;
+	background: transparent;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 10px;
+
+
+
+}
+
+textarea.modal-form-field {
+	height: 120px;
+	resize: none;
+	padding: 12px 16px;
+}
+
+.modal-form-field::placeholder {
+	color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-label {
+
+	display: block;
+	margin-bottom: 4px;
+
+}
+
+.modal-form
