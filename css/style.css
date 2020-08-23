@@ -798,15 +798,22 @@ img {
 
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
-	transition-property: fill;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	cursor: pointer;
 }
 
+.modal-form-icon.close-icon {
+	transform: translate(-50%, -50%);
+	fill: black;
+}
+
 .close-button:hover,
 .close-button:focus {
+	fill: var(--accent-color);
+}
+
+.close-button:hover .modal-form-icon.close-icon,
+.close-button:focus .modal-form-icon.close-icon {
 	fill: var(--accent-color);
 }
 
@@ -904,4 +911,10 @@ textarea.modal-form-field {
 
 	margin-top: 30px;
 	margin-bottom: 40px;
+}
+
+.custom-checkbox {
+	margin-top: 20px;
+	font-size: 14px;
+	line-height: 2;
 }

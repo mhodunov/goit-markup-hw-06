@@ -422,7 +422,8 @@
 	</footer>
 	<div class="backdrop is-hidden" data-modal>
 		<div class="modal-window">
-			<button class="close-button" data-modal-close><svg class="modal-form-icon" height="11" width="11">
+			<button class="close-button" data-modal-close><svg class="modal-form-icon close-icon" height="11"
+					width="11">
 					<use href="./images/icons/sprite.svg#icon-close"></use>
 				</svg></button>
 			<p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
@@ -451,8 +452,9 @@
 				<label class="modal-form-label" for="comment">Комментарий</label>
 				<div class="modal-form-wrap"><textarea name="comment" id="comment" placeholder="Введите текст" rows="8"
 						class="modal-form-field"></textarea></div>
-				<label for="check">Соглашаюсь с рассылкой и принимаю условия договора</label>
-				<input type="checkbox" name="check" id="check" value="check" />
+				<div class="custom-checkbox"><label for="check">Соглашаюсь с рассылкой и принимаю условия
+						договора</label>
+					<input type="checkbox" name="check" id="check" value="check" /></div>
 				<div class="button-submit-wrap"><button type="submit" class="button primary send">Отправить</button>
 				</div>
 			</form>
