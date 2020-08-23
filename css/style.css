@@ -256,6 +256,10 @@ img {
 	letter-spacing: 0.06em;
 
 	cursor: pointer;
+
+	transition-property: color, background-color, box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.primary {
@@ -285,10 +289,6 @@ img {
 	letter-spacing: 0.03em;
 	padding: 6px 22px;
 	min-width: 73px;
-
-	transition-property: color, background-color, box-shadow;
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-item {
@@ -308,10 +308,13 @@ img {
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.send {
-	
+.send:hover,
+.send:focus,
+.primary:hover,
+.primary:focus {
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
+	background: #188ce8;
+	outline: none;
 }
 
 /*Section*/
@@ -720,10 +723,9 @@ img {
 /*Subscribe*/
 
 .subscribe-field {
-
 	display: inline-block;
 	outline: none;
-	
+
 	height: 50px;
 	min-width: 358px;
 	margin-right: 12px;
@@ -740,7 +742,6 @@ img {
 	transition-property: border;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .subscribe-field::placeholder {
@@ -781,7 +782,6 @@ img {
 	transform: translate(-50%, -50%);
 	width: 90%;
 	max-width: 528px;
-	height: 500px;
 
 	background-color: #ffffff;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -798,13 +798,6 @@ img {
 
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
-	color: black;
-	background-image: url(../images/icons/close-icon.svg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 11px 11px;
-	fill: #000000;
-
 	transition-property: fill;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -824,7 +817,6 @@ img {
 }
 
 .modal-form {
-
 	font-weight: normal;
 	font-size: 12px;
 	line-height: 1.17;
@@ -833,10 +825,11 @@ img {
 
 	padding-right: 40px;
 	padding-left: 40px;
-
 }
 
 .modal-form-title {
+	margin-top: 40px;
+	margin-bottom: 12px;
 	font-weight: bold;
 	font-size: 20px;
 	line-height: 1.15;
@@ -846,7 +839,6 @@ img {
 }
 
 .modal-form-field {
-
 	display: block;
 	width: 100%;
 	height: 40px;
@@ -854,12 +846,15 @@ img {
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
 
-	padding-left: 12px;
+	padding-left: 42px;
 	padding-right: 12px;
 	margin-bottom: 10px;
 
+	outline: none;
 
-
+	transition-property: border;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textarea.modal-form-field {
@@ -873,10 +868,40 @@ textarea.modal-form-field {
 }
 
 .modal-form-label {
-
 	display: block;
 	margin-bottom: 4px;
-
 }
 
-.modal-form
+.modal-form-icon {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translate(0%, -50%);
+	fill: var(--secondary-text-color);
+
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-wrap {
+	position: relative;
+}
+
+.modal-form-field:focus + .modal-form-icon,
+.modal-form-field:hover + .modal-form-icon {
+	fill: var(--accent-color);
+}
+
+.modal-form-field:focus,
+.modal-form-field:hover {
+	border: 1px solid var(--accent-color);
+}
+
+.button-submit-wrap {
+	display: flex;
+	justify-content: center;
+
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
